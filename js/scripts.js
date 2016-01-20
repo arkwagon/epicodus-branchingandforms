@@ -9,18 +9,46 @@ $(document).ready(function() {
     var travelerAmount = parseInt( $("input#people").val() );
     var funLevel = parseInt( $("input#fun").val() );
 
-    // $(".year").text(year);
+    if ((ageNumber >= 18) && (daysOff >= 7) && (moneyAmount >= 100000) && (travelerAmount >= 1) && (funLevel >= 4)) {
+      $("#lakeoswego").show();
+    } else if ((ageNumber >= 21) && (daysOff >= 7) && (moneyAmount >= 5000) && (travelerAmount <= 2) && (funLevel >= 5)) {
+      $("#paris").show();
+    } else if ((ageNumber >= 30) && (daysOff >= 10) && (moneyAmount >= 10000) && (travelerAmount = 2) && (funLevel >= 5)) {
+      $("#japan").show();
+    } else if ((ageNumber >= 18) && (daysOff >= 4) && (moneyAmount >= 500) && (travelerAmount = 1) && (funLevel >= 5)) {
+      $("#cancun").show();
+    } else if ((ageNumber >= 16) && (daysOff >= 2) && (moneyAmount <= 200) && (travelerAmount >= 1) && (funLevel >= 5)) {
+      $("#roadtrip").show();
+    } else if ((ageNumber <= 15) || (daysOff <= 1) || (moneyAmount <= 50) || (travelerAmount >= 5) || (funLevel <= 4)) {
+      $("#staycation").show();
+    } else {
+      alert("Please fill in all fields with numeric values.");
+    }
 
-    // if (!result) {                 // same as writing if (result === false)
-    //   $(".not").text("not");
-    // } else {
-    //   $(".not").text("");
-    // }
 
-    $("#result").show();
     event.preventDefault();
   });
 });
+
+
+
+
+// if (moneyAmount >= 100000){
+//   $("#lakeoswego").show();
+// } else if ((ageNumber >= 21) && (daysOff >= 7) && (moneyAmount >= 5000) && (travelerAmount <= 2) {
+//   $("#paris").show();
+// } else if ((ageNumber >= 30) && (daysOff >= 10) && (moneyAmount >= 10000) && (travelerAmount <= 2) && (funLevel >= 5)) {
+//   $("#japan").show();
+// } else if ((ageNumber >= 18) && (daysOff >= 4) && (moneyAmount <= 750) && (travelerAmount = 1)) {
+//   $("#cancun").show();
+// } else if ((ageNumber >= 16) && (daysOff >= 2) && (moneyAmount >= 200) && (travelerAmount >= 1)) {
+//   $("#roadtrip").show();
+// } else if ((ageNumber <= 15) || (daysOff <= 1) || (moneyAmount <= 50) || (travelerAmount >= 4) || (funLevel <= 4)) {
+//   $("#staycation").show();
+// } else {
+//   alert("Please fill in all fields with numeric values.");
+// }
+
 
   // var score = 0;
   //
