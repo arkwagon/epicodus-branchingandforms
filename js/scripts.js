@@ -9,17 +9,17 @@ $(document).ready(function() {
     var travelerAmount = parseInt( $("input#people").val() );
     var funLevel = parseInt( $("input#fun").val() );
 
-    if ((ageNumber >= 18) && (daysOff >= 7) && (moneyAmount >= 100000) && (travelerAmount >= 1) && (funLevel >= 4)) {
+    if ((ageNumber >= 18) && (ageNumber <= 85) && (daysOff >= 7) && (moneyAmount >= 100000) && (travelerAmount >= 1) && (funLevel >= 4)) {
       $("#lakeoswego").show();
-    } else if ((ageNumber >= 21) && (daysOff >= 7) && (moneyAmount >= 5000) && (travelerAmount <= 2) && (funLevel >= 5)) {
-      $("#paris").show();
     } else if ((ageNumber >= 30) && (daysOff >= 10) && (moneyAmount >= 10000) && (travelerAmount = 2) && (funLevel >= 5)) {
-      $("#japan").show();
-    } else if ((ageNumber >= 18) && (daysOff >= 4) && (moneyAmount >= 500) && (travelerAmount = 1) && (funLevel >= 5)) {
+      $("#paris").show();
+    } else if ((ageNumber > 21) && (daysOff > 4) && (moneyAmount > 500) (moneyAmount < 10000) && (travelerAmount <= 4) && (funLevel >= 5)) {
+      $("#lasvegas").show();
+    } else if ((ageNumber >= 18) && (ageNumber <= 21) && (daysOff >= 4) && (moneyAmount >= 500) && (travelerAmount = 1) && (funLevel >= 5)) {
       $("#cancun").show();
-    } else if ((ageNumber >= 16) && (daysOff >= 2) && (moneyAmount <= 200) && (travelerAmount >= 1) && (funLevel >= 5)) {
+    } else if ((ageNumber >= 16) && (ageNumber <= 65) && (daysOff >= 2) && (daysOff <= 4) && (moneyAmount < 500) && (travelerAmount <= 4) && (funLevel > 5)) {
       $("#roadtrip").show();
-    } else if ((ageNumber <= 15) || (daysOff <= 1) || (moneyAmount <= 50) || (travelerAmount >= 5) || (funLevel <= 4)) {
+    } else if ((ageNumber < 16) || (ageNumber > 85) || (daysOff <= 2) || (moneyAmount < 50) || (travelerAmount >= 4) || (funLevel <= 4)) {
       $("#staycation").show();
     } else {
       alert("Please fill in all fields with numeric values.");
