@@ -9,21 +9,17 @@ $(document).ready(function() {
     var travelerAmount = parseInt( $("input#people").val() );
     var funLevel = parseInt( $("input#fun").val() );
 
-    if (moneyAmount >= 100000) {
+    if ( (ageNumber <= 17 || ageNumber >= 76) || (daysOff <= 2 || daysOff >= 15) || (moneyAmount <= 499) || (travelerAmount >= 5) || (funLevel <= 4 || funLevel >= 11) ) {
+      $("#staycation").show();
+    } else if (moneyAmount >= 100000) {
       $("#lakeoswego").show();
-    } else if ( (ageNumber >= 30) && (daysOff >= 10) && (moneyAmount >= 10000) && (moneyAmount <= 99999) && (travelerAmount <= 2) ) {
+    } else if ( (ageNumber >= 18 && ageNumber <= 75) && (daysOff >= 7 && daysOff <= 14) && (moneyAmount >= 10000) && (moneyAmount <= 99999) && (travelerAmount <= 2) ) {
       $("#paris").show();
-    } else if ( (ageNumber > 21) && (daysOff > 4) && (moneyAmount >= 1000 && moneyAmount <= 9999) && (travelerAmount <= 2) ) {
-      $("#lasvegas").show();
-    } //else if ( (ageNumber >= 18 && ageNumber <= 25) && (daysOff >= 4) && (moneyAmount >= 500 && moneyAmount < 1000) && (travelerAmount = 1) && (funLevel >= 5) ) {
-    //   $("#cancun").show();
-    // } else if ((ageNumber >= 16) && (ageNumber <= 65) && (daysOff >= 2) && (daysOff <= 4) && (moneyAmount < 500) && (travelerAmount <= 4) && (funLevel > 5)) {
-    //   $("#roadtrip").show();
-    // } else if ((ageNumber < 16) || (ageNumber > 85) || (daysOff <= 2) || (moneyAmount < 50) || (travelerAmount >= 4) || (funLevel <= 4)) {
-    //   $("#staycation").show();
-    // } else {
-    //   alert("Please fill in all fields with numeric values.");
-    // }
+    } else if ( (ageNumber >= 18 && ageNumber <= 75) && (daysOff >= 2 && daysOff < 14) && (moneyAmount >= 500 && moneyAmount <= 9999) ) {
+    $("#lasvegas").show();
+    } else {
+      alert("Please fill in all fields with numeric values.");
+    }
 
 
     event.preventDefault();
@@ -45,6 +41,11 @@ $(document).ready(function() {
 // } else {
 //   alert("Please fill in all fields with numeric values.");
 // }
+
+// } else if ( (ageNumber >= 18 && ageNumber <= 25) && (daysOff >= 4) && (moneyAmount >= 500 && moneyAmount < 1000) && (travelerAmount = 1) && (funLevel >= 5) ) {
+//   $("#cancun").show();
+// } else if ((ageNumber >= 16) && (ageNumber <= 65) && (daysOff >= 2) && (daysOff <= 4) && (moneyAmount < 500) && (travelerAmount <= 4) && (funLevel > 5)) {
+//   $("#roadtrip").show();
 
 
 // if (moneyAmount >= 100000){
